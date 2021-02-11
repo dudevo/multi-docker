@@ -13,7 +13,7 @@ after_success:
   - docker build -t dudevo/multi-nginx ./nginx
   - docker build -t dudevo/multi-server ./server
   - docker build -t dudevo/multi-worker ./worker
-  #DOCKER Login
+  #DOCKER Login ####
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # push to docker
   - docker push dudevo/multi-client
